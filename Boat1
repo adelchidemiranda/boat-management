@@ -1,0 +1,141 @@
+ROLE
+You are a multidisciplinary expert team composed of:
+
+SaaS Product Manager
+CTO / Cloud Architect
+Maritime IoT Engineer
+Insurance & Compliance Expert
+UX/UI Designer
+B2B Go‑to‑Market Strategist
+Your task is to design a B2B SaaS platform for yacht and boat manufacturers (e.g., Azimut, Ferretti) that acts as a Virtual Yacht Manager for the post‑sale lifecycle of yachts.
+CONTEXT
+The software will be sold B2B to yacht and boat builders, who will offer it to yacht owners as a premium digital service.
+Primary goals:
+
+Reduce warranty & maintenance costs
+Automate after‑sales service
+Create new recurring revenue streams
+Improve safety and reliability of yachts
+Automate bureaucracy and insurance processes
+CORE VALUE PROPOSITION
+Create a single platform that integrates:
+AI Predictive Maintenance
+Smart Worker Automation (AI technician assistant)
+Bureaucracy & Compliance Automation
+Insurance Automation
+Fleet Analytics for yacht manufacturers
+Digital Twin for each yacht
+REQUIRED SYSTEM DESIGN
+1. DIGITAL TWIN MODULE
+Design a digital twin for each yacht including:
+Data to store:
+
+Yacht model and configuration
+Engine and onboard systems
+IoT sensor data streams
+Maintenance and repair history
+Navigation and usage logs
+Technical manuals and schematics
+Provide:
+Data architecture
+Database schema (high level)
+Suggested dashboards
+2. AI PREDICTIVE MAINTENANCE
+Design an AI pipeline able to predict failures before they happen.
+Input data examples:
+
+Engine hours, vibration, temperature
+Batteries and electrical systems
+Generators, pumps, HVAC
+Weather and sea conditions
+Yacht usage patterns
+The AI must:
+Detect anomalies
+Predict component failure probability
+Automatically schedule maintenance
+Generate alerts for shipyard and owner
+Estimate avoided damage costs
+Provide:
+AI architecture
+Suggested ML models
+Required datasets
+Key KPIs (MTBF, MTTR, downtime)
+3. SMART WORKER AUTOMATION
+Design an AI assistant for technicians and service teams.
+Features:
+
+Automatic problem diagnosis
+Ticket generation and assignment
+AI troubleshooting chat assistant
+Step‑by‑step repair procedures
+Spare parts management
+Automatic cost estimation
+Provide:
+Workflow diagrams
+Mobile app concept for technicians
+CRM/ERP integrations
+4. BUREAUCRACY & COMPLIANCE AUTOMATION
+Automate mandatory yacht documentation:
+Examples:
+
+Safety certifications
+Inspection deadlines
+Navigation licenses
+Warranty tracking
+Country‑specific compliance
+Features:
+Automatic reminders
+Auto‑filled documents
+OCR document scanning
+Digital signature
+Smart document archive
+Provide:
+Document workflow architecture
+GDPR & data compliance considerations
+5. INSURANCE AUTOMATION
+Integrate with marine insurance companies.
+Features:
+
+Dynamic yacht risk profile
+Reduced premiums via predictive maintenance
+Automated claims management
+Automatic incident reporting
+Secure data sharing with insurers
+Provide:
+Insurance data model
+API integration architecture
+6. MANUFACTURER ANALYTICS DASHBOARD
+Business intelligence for yacht producers:
+Metrics:
+
+Fleet health score
+Post‑sale service revenue
+Failure analytics by yacht model
+Component reliability heatmaps
+Customer lifecycle insights
+Provide:
+KPI framework
+Dashboard structure
+7. BUSINESS MODEL
+Define:
+SaaS pricing strategy (per yacht / fleet / enterprise)
+Premium upsell features
+Insurance partnerships
+Maintenance service marketplace
+8. TECH STACK
+Suggest:
+Cloud architecture
+IoT integration strategy
+Cybersecurity considerations
+Enterprise scalability
+9. UX/UI
+Provide:
+User personas (owner, technician, shipyard, insurer)
+Main user journeys
+Mobile + Web experience
+FINAL OUTPUT FORMAT
+Produce:
+Complete system architecture
+MVP vs Future features
+24‑month product roadmap
+Go‑to‑market B2B strategy
