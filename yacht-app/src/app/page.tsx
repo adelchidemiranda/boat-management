@@ -402,7 +402,7 @@ export default function LandingPage() {
             <div key={t.author} style={{
               background: "white", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 12, padding: "28px",
             }}>
-              <p style={{ fontSize: 14, color: "#0C1C30", lineHeight: 1.75, marginBottom: 24, fontStyle: "italic", fontFamily: "var(--font-cormorant), serif", fontSize: 16 }}>
+              <p style={{ fontSize: 16, color: "#0C1C30", lineHeight: 1.75, marginBottom: 24, fontStyle: "italic", fontFamily: "var(--font-cormorant), serif" }}>
                 "{t.quote}"
               </p>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
