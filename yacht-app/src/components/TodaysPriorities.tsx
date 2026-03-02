@@ -1,6 +1,7 @@
 "use client";
 
 import { Sparkles, ChevronRight, AlertTriangle, Wrench, FileCheck, Clock } from "lucide-react";
+import CallOperatorButton from "./CallOperatorButton";
 
 interface Priority {
     id: string;
@@ -170,6 +171,9 @@ export default function TodaysPriorities({ alerts, maintenance, tickets, onNavig
                             </div>
 
                             <div style={{ flexShrink: 0, display: "flex", alignItems: "center", gap: 8 }}>
+                                {(p.type === "critical" || p.type === "maintenance") && (
+                                    <CallOperatorButton />
+                                )}
                                 <span
                                     className="stat-badge"
                                     style={{

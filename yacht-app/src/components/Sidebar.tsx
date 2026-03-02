@@ -5,6 +5,7 @@ import {
     LayoutDashboard, Bell, Cpu, Wrench, Users, FileCheck,
     BarChart2, Anchor, Settings, ChevronLeft, ChevronRight,
 } from "lucide-react";
+import AICallButton from "./AICallButton";
 
 const NAV = [
     {
@@ -116,6 +117,12 @@ export default function Sidebar({ active, onNavigate, alertCount }: Props) {
                         <span style={{ fontSize: 11, color: "var(--sidebar-text)" }}>IoT Connected</span>
                     </div>
                 )}
+
+                {/* AI Call Button */}
+                <div style={{ marginBottom: 8, padding: collapsed ? "0 4px" : "0" }}>
+                    <AICallButton variant="sidebar" collapsed={collapsed} />
+                </div>
+
                 <div className="sidebar-user" onClick={() => onNavigate("settings")}>
                     <div className="user-avatar">AZ</div>
                     {!collapsed && (

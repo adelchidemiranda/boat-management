@@ -1,6 +1,7 @@
 "use client";
 
 import { RefreshCw, ChevronRight, AlertTriangle, Wrench, CheckCircle } from "lucide-react";
+import CallOperatorButton from "./CallOperatorButton";
 
 interface Props {
     stats: any;
@@ -158,6 +159,7 @@ export default function FleetOverview({ stats, yachts, alerts, records, onNaviga
                                     </div>
                                     <div style={{ fontSize: 11, color: "var(--text-3)" }}>{r.yacht_name}</div>
                                 </div>
+                                <CallOperatorButton />
                                 <span className={`stat-badge ${r.status === "in_progress" ? "badge-warn" : "badge-info"}`}>
                                     {r.status === "in_progress" ? "In Progress" : "Scheduled"}
                                 </span>
@@ -195,6 +197,7 @@ export default function FleetOverview({ stats, yachts, alerts, records, onNaviga
                                     </div>
                                     <div style={{ fontSize: 11, color: "var(--text-3)" }}>{a.yacht_name}</div>
                                 </div>
+                                <CallOperatorButton />
                             </div>
                         ))}
                     </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { RefreshCw, CheckCircle } from "lucide-react";
+import CallOperatorButton from "./CallOperatorButton";
 
 interface Props {
     alerts: any[];
@@ -141,6 +142,7 @@ export default function AlertsPanel({ alerts, onRefresh }: Props) {
                                 <span className={`stat-badge ${a.type === "critical" ? "badge-crit" : a.type === "warning" ? "badge-warn" : "badge-info"}`}>
                                     {a.type}
                                 </span>
+                                <CallOperatorButton />
                             </div>
 
                             {/* Expanded AI recommendation */}
@@ -156,18 +158,21 @@ export default function AlertsPanel({ alerts, onRefresh }: Props) {
                                     <p style={{ fontSize: 13, color: "var(--text-1)", lineHeight: 1.6, marginBottom: 10 }}>
                                         {rec.text}
                                     </p>
-                                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
                                         <div style={{ fontSize: 12, color: "var(--text-3)" }}>
                                             Est. cost: <span style={{ color: "var(--text-1)", fontWeight: 500 }}>{rec.cost}</span>
                                         </div>
-                                        <button
-                                            className="btn-primary"
-                                            style={{ fontSize: 12, padding: "6px 12px" }}
-                                            disabled={resolving === a.id}
-                                            onClick={e => { e.stopPropagation(); handleResolve(a.id); }}
-                                        >
-                                            {resolving === a.id ? "Resolving…" : "Mark Resolved"}
-                                        </button>
+                                        <div style={{ display: "flex", gap: 8 }}>
+                                            <CallOperatorButton label="Call the Operator" />
+                                            <button
+                                                className="btn-primary"
+                                                style={{ fontSize: 12, padding: "6px 12px" }}
+                                                disabled={resolving === a.id}
+                                                onClick={e => { e.stopPropagation(); handleResolve(a.id); }}
+                                            >
+                                                {resolving === a.id ? "Resolving…" : "Mark Resolved"}
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             )}

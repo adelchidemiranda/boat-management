@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Plus, User, ChevronRight } from "lucide-react";
+import CallOperatorButton from "./CallOperatorButton";
 
 interface Props { records: any[] }
 
@@ -91,7 +92,12 @@ export default function MaintenancePanel({ records }: Props) {
                                     <td style={{ color: "var(--text-2)", fontSize: 12 }}>{fmtDate(r.scheduled_date)}</td>
                                     <td style={{ fontWeight: 500 }}>{r.cost > 0 ? `€${parseFloat(r.cost).toLocaleString()}` : "—"}</td>
                                     <td><span className={`stat-badge ${cfg.cls}`}>{cfg.label}</span></td>
-                                    <td><ChevronRight size={13} color="var(--text-3)" /></td>
+                                    <td style={{ textAlign: "right" }}>
+                                        <div style={{ display: "flex", alignItems: "center", gap: 8, justifyContent: "flex-end" }}>
+                                            <CallOperatorButton />
+                                            <ChevronRight size={13} color="var(--text-3)" />
+                                        </div>
+                                    </td>
                                 </tr>
                             );
                         })}
