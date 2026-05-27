@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
+import AssistenceButton from "./components/AssistenceButton";
 
 // Luxury serif for headings — elegant, nautical feel
 const cormorant = Cormorant_Garamond({
