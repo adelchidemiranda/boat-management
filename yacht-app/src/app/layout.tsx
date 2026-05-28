@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
-      <body className={dmSans.className}>{children}</body>
+      <body className={dmSans.className}>{children}<AssistenceButton /></body>
     </html>
   );
 }
